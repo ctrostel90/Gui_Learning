@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/PlanetInfoUI.gd" type="Script" id=1]
+
+[node name="PlanetInfoUI" type="PanelContainer"]
+margin_left = 767.0
+margin_top = 118.0
+margin_right = 1093.0
+margin_bottom = 537.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 319.0
+margin_bottom = 412.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 82.0
+margin_bottom = 405.0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_right = 82.0
+margin_bottom = 14.0
+text = "Planet Name"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 86.0
+margin_right = 261.0
+margin_bottom = 405.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 175.0
+margin_bottom = 14.0
+text = "Place holder Text"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 265.0
+margin_right = 312.0
+margin_bottom = 405.0
+size_flags_horizontal = 0
+alignment = 2
+
+[node name="btnCloseWindow" type="Button" parent="HBoxContainer/VBoxContainer3"]
+margin_top = 385.0
+margin_right = 47.0
+margin_bottom = 405.0
+text = "Close"
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/btnCloseWindow" to="." method="_on_btnCloseWindow_pressed"]
